@@ -96,6 +96,10 @@ export class DiscordClient extends EventEmitter {
     await Promise.all(this.channels.map(channel => channel.setTopic(topic)))
   }
 
+  getEmojiID(name: string) {
+    return this.client.emojis.cache.find(emoji => emoji.name === name)
+  }
+
   private canRespondToMessage(message: Discord.Message): boolean {
     return (
       message.channel.type === 'text' &&
@@ -107,8 +111,10 @@ export class DiscordClient extends EventEmitter {
   }
 
   private handleHelpCommand(channel: Discord.TextChannel) {
+    const emoji = this.getEmojiID('Pog')
+
     channel.send(`
-    Hi I'm Germy's Minecraft server bot. Here are some commands you could use :) :Pog:
+    Hi I'm Germy's Minecraft server bot. Here are some commands you could use ${emoji}
 
     \`!command <command>\` - Run a server command
     \`!help\`              - Prints this message
