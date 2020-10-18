@@ -1,0 +1,28 @@
+node_modules/
+yarn-error.log
+
+# Compiled TypeScript files
+dist/
+
+# Local file for defining environment variables
+.env
+
+# Log data
+logs/
+
+# World data
+the-bois/
+
+# EULA should be accpeted per server instance
+eula.txt
+
+# Minecraft vanilla server jar. Can be downloaded here:
+# https://www.minecraft.net/en-us/download/server
+server.jar
+
+# Server specific JSON configuration
+banned-*.json
+ops.json
+usercache.json
+whitelist.json
+

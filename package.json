@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Minecraft server wrapper and Discord bot for the bois",
+  "author": "Jeremy Asuncion <jeremy.asuncion@postmates.com>",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/main",
+  "scripts": {
+    "build": "tsc -b",
+    "build:watch": "yarn build --watch",
+    "clean": "yarn build --clean",
+    "start": "node ."
+  },
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "minecraft-server-util": "^3.0.3",
+    "tslib": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/ws": "^7.2.7",
+    "lerna": "^3.22.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
+  }
+}
