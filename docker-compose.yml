@@ -1,16 +1,14 @@
 version: '3.8'
 
 services:
-  # bot:
-  #   build: ./packages/bot
-
   server:
     build: .
     environment:
       # Get token from .env
       - DISCORD_BOT_CHANNEL
       - DISCORD_BOT_TOKEN
-      - JAVA_MAX_MEMORY=1G
+      - HOST
+      - JAVA_MAX_MEMORY=8G
       - JAVA_MIN_MEMORY=1G
       - RCON_PASSWORD=rcon-password
       - SERVER_JAR_FILE=server.jar

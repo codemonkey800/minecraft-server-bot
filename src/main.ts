@@ -22,7 +22,7 @@ async function main() {
   const offlineText = ':red_circle: Offline'
 
   const formatStatusText = (status: string) =>
-    `Status: ${status} | Host: home.jeremyasuncion.io`
+    `Status: ${status} | Host: ${process.env.HOST}`
 
   const formatOnlineStatus = (count: number, max: number) =>
     `:green_circle: ${count} / ${max}`
